@@ -1,0 +1,22 @@
+function pay() {
+    if (total === 0) {
+        alert("¡Por favor selecciona al menos una pizza!");
+    } else {
+        document.getElementById('messageAlert').innerText = "¡Gracias por tu compra!";
+        document.getElementById('messageAlert').style.display = "block";
+        
+        // Restablecer las cantidades de las pizzas a 0
+        document.getElementById('napolitanaQty').innerText = 0;
+        document.getElementById('espanolaQty').innerText = 0;
+        document.getElementById('pepperoniQty').innerText = 0;
+
+        // Restablecer el total a 0
+        total = 0;
+        document.getElementById('totalAmount').innerText = total;
+
+        // Ocultar el mensaje después de 3 segundos
+        setTimeout(() => {
+            document.getElementById('messageAlert').style.display = "none";
+        }, 3000);
+    }
+}
